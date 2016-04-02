@@ -1,0 +1,14 @@
+source https://www.nuget.org/api/v2/
+
+nuget Nancy
+nuget Nancy.Testing
+nuget xunit
+nuget Nancy.Bootstrappers.Mef
+nuget Nancy.Bootstrapper.Grace
+nuget Nancy.Bootstrappers.Mef2
+nuget Nancy.Bootstrappers.Autofac
+nuget Nancy.Bootstrappers.Ninject
+nuget Nancy.Bootstrappers.Windsor
+nuget Nancy.Bootstrappers.DryIoc
+nuget Nancy.Bootstrappers.Unity
+nuget Nancy.BootStrappers.StructureMap
