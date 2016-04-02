@@ -32,5 +32,33 @@ namespace Nancy.Bootstrapper.Tests
             // then
             Assert.Equal("2", response.Body.AsString());
         }
+
+        [Theory]
+        [ClassData(typeof(TestedBootstrappers))]
+        public void TypeRegisteredAsSingletonsAsIndividuals_Should_BeInjectedAsCollection(INancyBootstrapper bootstrapper)
+        {
+            // given
+            var browser = new Browser(bootstrapper);
+
+            // when
+            var response = browser.Get("singletons/individuals");
+
+            // then
+            Assert.Equal("2", response.Body.AsString());
+        }
+
+        [Theory]
+        [ClassData(typeof(TestedBootstrappers))]
+        public void TypeRegisteredAsSingletonsAsMultiple_Should_BeInjectedAsCollection(INancyBootstrapper bootstrapper)
+        {
+            // given
+            var browser = new Browser(bootstrapper);
+
+            // when
+            var response = browser.Get("singletons/multiple");
+
+            // then
+            Assert.Equal("2", response.Body.AsString());
+        }
     }
 }

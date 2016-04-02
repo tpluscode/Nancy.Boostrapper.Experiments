@@ -41,8 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\SingletonsModule.cs" />
     <Compile Include="Modules\PerRequestModule.cs" />
+    <Compile Include="Services\ISingleton.cs" />
     <Compile Include="Services\IPerRequest.cs" />
+    <Compile Include="Services\ISingletonAsMultiple.cs" />
     <Compile Include="Services\IPerRequestAsMultiple.cs" />
     <Compile Include="Registrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
