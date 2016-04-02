@@ -6,9 +6,12 @@ namespace Nancy.Boostrapper.TestSubjects.Modules
 {
     public class PerRequestModule : NancyModule
     {
-        public PerRequestModule(IEnumerable<IPerRequest> deps)
+        public PerRequestModule(
+            IEnumerable<IPerRequestAsMultiple> asMultiple,
+            IEnumerable<IPerRequest> individuals) : base("per-request")
         {
-            Get[""] = _ => deps.Count().ToString();
+            Get["multiple"] = _ => asMultiple.Count().ToString();
+            Get["individuals"] = _ => individuals.Count().ToString();
         }
     }
 }

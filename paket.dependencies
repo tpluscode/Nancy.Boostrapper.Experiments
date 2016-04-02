@@ -1,5 +1,7 @@
 source https://www.nuget.org/api/v2/
 
+redirects: on
+
 nuget Nancy
 nuget Nancy.Testing
 nuget xunit
@@ -12,3 +14,4 @@ nuget Nancy.Bootstrappers.Windsor
 nuget Nancy.Bootstrappers.DryIoc
 nuget Nancy.Bootstrappers.Unity
 nuget Nancy.BootStrappers.StructureMap
+nuget Unity = 3.5.1404

@@ -4,11 +4,11 @@
     {
     }
 
-    class PerRequest1 : IPerRequest
+    public class PerRequest1 : IPerRequest
     {
     }
 
-    class PerRequest2 : IPerRequest
+    public class PerRequest2 : IPerRequest
     {
     }
 }

@@ -6,6 +6,7 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{A7328648-03B9-43D1-96A7-70B1B4BEC74B}"
 	ProjectSection(SolutionItems) = preProject
 		paket.dependencies = paket.dependencies
+		paket.lock = paket.lock
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nancy.Boostrapper.TestSubjects", "Nancy.Boostrapper.TestSubjects\Nancy.Boostrapper.TestSubjects.csproj", "{DFFCC3D3-14E8-43F3-9B68-3C20FF16B95E}"

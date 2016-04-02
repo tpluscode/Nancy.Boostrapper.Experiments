@@ -7,7 +7,10 @@ namespace Nancy.Boostrapper.TestSubjects
     {
         public Registrations()
         {
-            RegisterAll<IPerRequest>(Lifetime.PerRequest);
+            RegisterAll<IPerRequestAsMultiple>(Lifetime.PerRequest);
+
+            Register<IPerRequest>(typeof(PerRequest1), Lifetime.PerRequest);
+            Register<IPerRequest>(typeof(PerRequest2), Lifetime.PerRequest);
         }
     }
 }

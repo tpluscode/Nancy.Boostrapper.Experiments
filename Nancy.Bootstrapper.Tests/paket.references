@@ -1,2 +1,10 @@
 Nancy.Testing
 xunit
+Nancy.Bootstrapper.Grace
+Nancy.Bootstrappers.Mef2
+Nancy.Bootstrappers.Autofac
+Nancy.Bootstrappers.Ninject
+Nancy.Bootstrappers.Windsor
+Nancy.Bootstrappers.DryIoc
+Nancy.Bootstrappers.Unity
+Nancy.BootStrappers.StructureMap
