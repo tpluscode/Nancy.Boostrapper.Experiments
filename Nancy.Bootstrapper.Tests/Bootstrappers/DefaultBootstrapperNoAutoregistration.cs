@@ -1,4 +1,4 @@
-﻿using Nancy.Bootstrapper.TestSubjects.Services;
+﻿using Nancy.Bootstrapper.TestSubjects;
 using Nancy.TinyIoc;
 
 namespace Nancy.Bootstrapper.Tests.Bootstrappers

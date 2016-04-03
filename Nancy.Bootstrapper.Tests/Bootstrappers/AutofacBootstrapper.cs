@@ -1,5 +1,5 @@
 using Autofac;
-using Nancy.Bootstrapper.TestSubjects.Services;
+using Nancy.Bootstrapper.TestSubjects;
 using Nancy.Bootstrappers.Autofac;
 
 namespace Nancy.Bootstrapper.Tests.Bootstrappers

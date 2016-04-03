@@ -1,6 +1,6 @@
 using LightInject;
 using LightInject.Nancy;
-using Nancy.Bootstrapper.TestSubjects.Services;
+using Nancy.Bootstrapper.TestSubjects;
 
 namespace Nancy.Bootstrapper.Tests.Bootstrappers
 {
