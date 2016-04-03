@@ -12,11 +12,11 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 
 ## The tests
 
-1. `Register<T>(Lifetime.PerRequest)`, where `T` has dependency registered inside bootstrapper
-2. Mutiple calls to `Register<T>(Lifetime.Singleton)` - injected as `IEnumerable<T>`
-3. `RegisterAll<T>(Lifetime.Singleton)` - injected as `IEnumerable<T>`
-4. Mutiple calls to `Register<T>(Lifetime.PerRequest)` - injected as `IEnumerable<T>`
-5. `RegisterAll<T>(Lifetime.PerRequest)` - injected as `IEnumerable<T>`
+1. [`Register<T>(Lifetime.PerRequest)`, where `T` has dependency registered inside bootstrapper](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test1.cs)
+2. [Mutiple calls to `Register<T>(Lifetime.Singleton)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test2.cs)
+3. [`RegisterAll<T>(Lifetime.Singleton)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test3.cs)
+4. [Mutiple calls to `Register<T>(Lifetime.PerRequest)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test4.cs)
+5. [`RegisterAll<T>(Lifetime.PerRequest)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test5.cs)
 
 ### Test Results
 
