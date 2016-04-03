@@ -1,5 +1,4 @@
-﻿using LightInject.Nancy;
-using Nancy.Bootstrapper.Tests.Bootstrappers;
+﻿using Nancy.Bootstrapper.Tests.Bootstrappers;
 using Nancy.Testing;
 using Xunit;
 
@@ -15,7 +14,7 @@ namespace Nancy.Bootstrapper.Tests
         }
 
         [Fact]
-        public void TypesRegisteredPerRequestAsCollection_Should_BeInjectedAsCollection()
+        public void Test5_TypeRegisteredPerRequestAsCollection_Should_BeInjectedAsCollection()
         {
             // when
             var response = _browser.Get("per-request/multiple");
@@ -25,7 +24,7 @@ namespace Nancy.Bootstrapper.Tests
         }
 
         [Fact]
-        public void TypeRegisteredPerRequestAsIndividuals_Should_BeInjectedAsCollection()
+        public void Test4_TypeRegisteredPerRequestAsIndividuals_Should_BeInjectedAsCollection()
         {
             // when
             var response = _browser.Get("per-request/individuals");
@@ -35,7 +34,7 @@ namespace Nancy.Bootstrapper.Tests
         }
 
         [Fact]
-        public void TypeRegisteredAsSingletonsAsIndividuals_Should_BeInjectedAsCollection()
+        public void Test2_TypeRegisteredAsSingletonsAsIndividuals_Should_BeInjectedAsCollection()
         {
             // when
             var response = _browser.Get("singletons/individuals");
@@ -45,7 +44,7 @@ namespace Nancy.Bootstrapper.Tests
         }
 
         [Fact]
-        public void TypeRegisteredAsSingletonsAsMultiple_Should_BeInjectedAsCollection()
+        public void Test3_TypeRegisteredAsSingletonsAsMultiple_Should_BeInjectedAsCollection()
         {
             // when
             var response = _browser.Get("singletons/multiple");
@@ -55,7 +54,7 @@ namespace Nancy.Bootstrapper.Tests
         }
 
         [Fact]
-        public void TypeRegisteredAsPerRequest_Should_BeInjectedWithDependencyRegistereInBootstrapper()
+        public void Test1_TypeRegisteredAsPerRequest_Should_BeInjectedWithDependencyRegistereInBootstrapper()
         {
             // when
             var response = _browser.Get("mixed/per-request/depends-on/container-registered");
