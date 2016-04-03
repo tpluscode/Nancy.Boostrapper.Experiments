@@ -45,15 +45,15 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 
 ### Grace
 
-**<sup>1</sup>** - Grace has an outdated Nancy dependency and doesn't work with latest version.
+**<sup>1</sup>** - Grace package has an outdated Nancy dependency and doesn't work with latest version.
 
 ### MEF
 
-**<sup>1</sup>** - MEF doesn't work at all and even adding a reference breaks entire solution.
+**<sup>1</sup>** - MEF package has an outdated Nancy dependency and doesn't work with latest version.
 
 ### MEF2
 
-**<sup>1</sup>** - this seems to be an issue similar to TinyIoC without autoregistration
+**<sup>1</sup>** - this one is weird - `RegisterAll<T>()` has no effect with MEF2
 
 ### Windsor
 
