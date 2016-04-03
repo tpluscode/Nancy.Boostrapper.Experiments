@@ -12,7 +12,7 @@ namespace Nancy.Bootstrapper.Tests.Bootstrappers
             base.ConfigureApplicationContainer(existingContainer);
 
             existingContainer.Register(
-                Component.For<IRegisteredOnContainerPerRequest>().ImplementedBy<RegisteredOnContainerPerRequest>().LifestylePerWebRequest());
+                Component.For<IRegisteredOnContainerPerRequest>().ImplementedBy<RegisteredOnContainerPerRequest>().LifestyleTransient());
         }
     }
 }
