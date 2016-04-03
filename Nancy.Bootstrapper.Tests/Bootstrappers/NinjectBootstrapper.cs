@@ -1,4 +1,4 @@
-using Nancy.Boostrapper.TestSubjects.Services;
+using Nancy.Bootstrapper.TestSubjects.Services;
 using Nancy.Bootstrappers.Ninject;
 using Ninject;
 

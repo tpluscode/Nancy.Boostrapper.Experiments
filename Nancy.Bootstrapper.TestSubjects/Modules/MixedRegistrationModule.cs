@@ -1,6 +1,6 @@
-﻿using Nancy.Boostrapper.TestSubjects.Services;
+﻿using Nancy.Bootstrapper.TestSubjects.Services;
 
-namespace Nancy.Boostrapper.TestSubjects.Modules
+namespace Nancy.Bootstrapper.TestSubjects.Modules
 {
     public class MixedRegistrationModule : NancyModule
     {

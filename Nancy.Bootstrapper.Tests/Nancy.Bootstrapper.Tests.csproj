@@ -52,7 +52,6 @@
     <Compile Include="Bootstrappers\NinjectBootstrapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Bootstrappers\StructureMapBootstrapper.cs" />
-    <Compile Include="TestedBootstrappers.cs" />
     <Compile Include="Bootstrappers\UnityBootstrapper.cs" />
     <Compile Include="Bootstrappers\WindsorBootstrapper.cs" />
   </ItemGroup>
@@ -60,9 +59,9 @@
     <None Include="paket.references" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Nancy.Boostrapper.TestSubjects\Nancy.Boostrapper.TestSubjects.csproj">
-      <Project>{dffcc3d3-14e8-43f3-9b68-3c20ff16b95e}</Project>
-      <Name>Nancy.Boostrapper.TestSubjects</Name>
+    <ProjectReference Include="..\Nancy.Bootstrapper.TestSubjects\Nancy.Bootstrapper.TestSubjects.csproj">
+      <Project>{DFFCC3D3-14E8-43F3-9B68-3C20FF16B95E}</Project>
+      <Name>Nancy.Bootstrapper.TestSubjects</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

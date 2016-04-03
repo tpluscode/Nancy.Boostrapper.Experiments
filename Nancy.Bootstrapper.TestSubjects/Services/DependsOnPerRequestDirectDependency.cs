@@ -1,6 +1,6 @@
 ﻿using System.Composition;
 
-namespace Nancy.Boostrapper.TestSubjects.Services
+namespace Nancy.Bootstrapper.TestSubjects.Services
 {
     public class DependsOnPerRequestDirectDependency
     {

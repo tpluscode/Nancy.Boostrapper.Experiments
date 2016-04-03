@@ -1,7 +1,6 @@
-﻿using Nancy.Boostrapper.TestSubjects.Services;
-using Nancy.Bootstrapper;
+﻿using Nancy.Bootstrapper.TestSubjects.Services;
 
-namespace Nancy.Boostrapper.TestSubjects
+namespace Nancy.Bootstrapper.TestSubjects
 {
     public class Registrations : Bootstrapper.Registrations
     {

@@ -1,5 +1,5 @@
 using DryIoc;
-using Nancy.Boostrapper.TestSubjects.Services;
+using Nancy.Bootstrapper.TestSubjects.Services;
 using Nancy.Bootstrappers.DryIoc;
 
 namespace Nancy.Bootstrapper.Tests.Bootstrappers

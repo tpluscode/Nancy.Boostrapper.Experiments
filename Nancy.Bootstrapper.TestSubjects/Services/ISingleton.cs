@@ -1,4 +1,4 @@
-﻿namespace Nancy.Boostrapper.TestSubjects.Services
+﻿namespace Nancy.Bootstrapper.TestSubjects.Services
 {
     public interface ISingleton
     {

@@ -7,7 +7,7 @@
     <ProjectGuid>{DFFCC3D3-14E8-43F3-9B68-3C20FF16B95E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Nancy.Boostrapper.TestSubjects</RootNamespace>
+    <RootNamespace>Nancy.Bootstrapper.TestSubjects</RootNamespace>
     <AssemblyName>Nancy.Boostrapper.TestSubjects</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

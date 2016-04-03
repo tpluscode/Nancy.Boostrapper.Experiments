@@ -1,5 +1,5 @@
 using Microsoft.Practices.Unity;
-using Nancy.Boostrapper.TestSubjects.Services;
+using Nancy.Bootstrapper.TestSubjects.Services;
 using Nancy.Bootstrappers.Unity;
 
 namespace Nancy.Bootstrapper.Tests.Bootstrappers
