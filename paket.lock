@@ -40,7 +40,6 @@ NUGET
     LightInject.Nancy (1.0.0.1)
       LightInject (>= 3.0.2)
     Microsoft.Composition (1.0.30)
-    Microsoft.Web.Infrastructure (1.0)
     Nancy (1.4.3)
     Nancy.Bootstrapper.Grace (0.20)
       Grace (>= 1.0)

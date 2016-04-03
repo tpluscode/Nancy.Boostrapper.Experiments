@@ -104,6 +104,10 @@ namespace Nancy.Bootstrapper.Tests
     {
     }
 
+    //public class MefBootsrapperTests : BootstrapperTests<MefBootstrapper>
+    //{
+    //}
+
     public class LightInjectBootsrapperTests : BootstrapperTests<LightInjectBootstrapper>
     {
     }
