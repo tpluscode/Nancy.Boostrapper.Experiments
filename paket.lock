@@ -21,6 +21,7 @@ NUGET
       System.Threading (>= 4.0)
     Grace (2.4.2)
     Microsoft.Composition (1.0.30)
+    Microsoft.Web.Infrastructure (1.0)
     Nancy (1.4.3)
     Nancy.Bootstrapper.Grace (0.20)
       Grace (>= 1.0)

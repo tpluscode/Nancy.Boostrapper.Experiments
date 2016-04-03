@@ -60,5 +60,19 @@ namespace Nancy.Bootstrapper.Tests
             // then
             Assert.Equal("2", response.Body.AsString());
         }
+
+        [Theory]
+        [ClassData(typeof(TestedBootstrappers))]
+        public void TypeRegisteredAsPerRequest_Should_BeInjectedWithDependencyRegistereInBootstrapper(INancyBootstrapper bootstrapper)
+        {
+            // given
+            var browser = new Browser(bootstrapper);
+
+            // when
+            var response = browser.Get("mixed/per-request/depends-on/container-registered");
+
+            // then
+            Assert.Equal("I'm ok", response.Body.AsString());
+        }
     }
 }

@@ -14,6 +14,8 @@ namespace Nancy.Boostrapper.TestSubjects
             RegisterAll<ISingletonAsMultiple>();
             Register<ISingleton>(typeof(Singleton1));
             Register<ISingleton>(typeof(Singleton2));
+
+            Register<DependsOnPerRequestDirectDependency>(Lifetime.PerRequest);
         }
     }
 }

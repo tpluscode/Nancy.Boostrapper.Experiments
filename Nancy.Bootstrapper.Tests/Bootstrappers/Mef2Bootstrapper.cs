@@ -1,3 +1,4 @@
+using System.Composition;
 using Nancy.Bootstrappers.Mef2;
 
 namespace Nancy.Bootstrapper.Tests.Bootstrappers
