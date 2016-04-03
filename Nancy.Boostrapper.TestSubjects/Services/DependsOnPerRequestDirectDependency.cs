@@ -1,4 +1,6 @@
-﻿namespace Nancy.Boostrapper.TestSubjects.Services
+﻿using System.Composition;
+
+namespace Nancy.Boostrapper.TestSubjects.Services
 {
     public class DependsOnPerRequestDirectDependency
     {
@@ -15,6 +17,7 @@
         string Value { get; }
     }
 
+    [Export(typeof(IRegisteredOnContainerPerRequest)), Shared("PerRequest")]
     public class RegisteredOnContainerPerRequest : IRegisteredOnContainerPerRequest
     {
         public string Value => "I'm ok";
