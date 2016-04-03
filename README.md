@@ -46,7 +46,7 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 
 #### DryIoc
 
-**<sup>1</sup>** - The implementations of `IRequestStartup` seem to be resolved from application container and not request container, and so the dependency cannot be satisfied
+**<sup>1</sup>** - The implementations of `IRequestStartup` seem to be resolved from application container and not request container, and so the dependency cannot be satisfied. See issue [lcssk8board/Nancy.Bootstrappers.DryIoc#2](/lcssk8board/Nancy.Bootstrappers.DryIoc/issues/2)
 
 ### Grace
 
