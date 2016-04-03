@@ -39,7 +39,7 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 
 ### TinyIoC
 
-**<sup>1</sup>** - When autoregistration is enabled, PerRequest components are resolved twice. I guess they are registered in both scopes
+**<sup>1</sup>** - When autoregistration is enabled, PerRequest components are resolved twice. I guess they are registered in both scopes. See issue [NancyFx/Nancy#2384](https://github.com/NancyFx/Nancy/issues/2384)
 
 **<sup>2</sup>** - TinyIoC resolves collections only if registered with `RegisterAll`/`RegisterMultiple`
 
