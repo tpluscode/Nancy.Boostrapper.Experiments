@@ -16,3 +16,4 @@ nuget Nancy.Bootstrappers.Unity
 nuget Nancy.BootStrappers.StructureMap
 nuget Unity = 3.5.1404
 nuget Microsoft.Web.Infrastructure
+nuget LightInject.Nancy

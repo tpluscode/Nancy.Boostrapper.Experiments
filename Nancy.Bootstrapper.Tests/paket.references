@@ -9,3 +9,4 @@ Nancy.Bootstrappers.DryIoc
 Nancy.Bootstrappers.Unity
 Nancy.BootStrappers.StructureMap
 Microsoft.Web.Infrastructure
+LightInject.Nancy

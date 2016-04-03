@@ -1,4 +1,5 @@
-﻿using Nancy.Bootstrapper.Tests.Bootstrappers;
+﻿using LightInject.Nancy;
+using Nancy.Bootstrapper.Tests.Bootstrappers;
 using Nancy.Testing;
 using Xunit;
 
@@ -101,6 +102,10 @@ namespace Nancy.Bootstrapper.Tests
     }
 
     public class Mef2BootsrapperTests : BootstrapperTests<Mef2Bootstrapper>
+    {
+    }
+
+    public class LightInjectBootsrapperTests : BootstrapperTests<LightInjectBootstrapper>
     {
     }
 }

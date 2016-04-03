@@ -20,6 +20,25 @@ NUGET
       System.Runtime.Extensions (>= 4.0)
       System.Threading (>= 4.0)
     Grace (2.4.2)
+    LightInject (4.0.8)
+      System.Collections (>= 4.0.10) - framework: dnxcore50
+      System.Collections.Concurrent (>= 4.0.10) - framework: dnxcore50
+      System.Diagnostics.Tools (>= 4.0) - framework: dnxcore50
+      System.IO (>= 4.0.10) - framework: dnxcore50
+      System.Linq (>= 4.0) - framework: dnxcore50
+      System.Linq.Expressions (>= 4.0.10) - framework: dnxcore50
+      System.Reflection (>= 4.0) - framework: dnxcore50
+      System.Reflection.Emit (>= 4.0) - framework: dnxcore50
+      System.Reflection.Emit.Lightweight (>= 4.0) - framework: dnxcore50
+      System.Reflection.Extensions (>= 4.0) - framework: dnxcore50
+      System.Reflection.TypeExtensions (>= 4.0) - framework: dnxcore50
+      System.Runtime (>= 4.0.20) - framework: dnxcore50
+      System.Runtime.Extensions (>= 4.0.10) - framework: dnxcore50
+      System.Text.Encoding (>= 4.0.10) - framework: dnxcore50
+      System.Text.RegularExpressions (>= 4.0.10) - framework: dnxcore50
+      System.Threading (>= 4.0.10) - framework: dnxcore50
+    LightInject.Nancy (1.0.0.1)
+      LightInject (>= 3.0.2)
     Microsoft.Composition (1.0.30)
     Microsoft.Web.Infrastructure (1.0)
     Nancy (1.4.3)
@@ -157,6 +176,11 @@ NUGET
       System.Runtime (>= 4.0) - framework: dnxcore50
     System.Reflection.Emit.ILGeneration (4.0) - framework: dnxcore50
       System.Reflection (>= 4.0) - framework: dnxcore50
+      System.Reflection.Primitives (>= 4.0) - framework: dnxcore50
+      System.Runtime (>= 4.0) - framework: dnxcore50
+    System.Reflection.Emit.Lightweight (4.0) - framework: dnxcore50
+      System.Reflection (>= 4.0) - framework: dnxcore50
+      System.Reflection.Emit.ILGeneration (>= 4.0) - framework: dnxcore50
       System.Reflection.Primitives (>= 4.0) - framework: dnxcore50
       System.Runtime (>= 4.0) - framework: dnxcore50
     System.Reflection.Extensions (4.0)
