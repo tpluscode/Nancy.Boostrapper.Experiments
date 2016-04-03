@@ -6,18 +6,14 @@ namespace Nancy.Bootstrapper.Tests
 {
     public abstract class BootstrapperTests<TBs> where TBs : INancyBootstrapper, new()
     {
-        private readonly Browser _browser;
-
-        protected BootstrapperTests()
-        {
-            _browser = new Browser(new TBs());
-        }
-
         [Fact]
         public void Test5_TypeRegisteredPerRequestAsCollection_Should_BeInjectedAsCollection()
         {
+            // given
+            var browser = new Browser(new TBs());
+
             // when
-            var response = _browser.Get("per-request/multiple");
+            var response = browser.Get("per-request/multiple");
 
             // then
             Assert.Equal("2", response.Body.AsString());
@@ -26,8 +22,11 @@ namespace Nancy.Bootstrapper.Tests
         [Fact]
         public void Test4_TypeRegisteredPerRequestAsIndividuals_Should_BeInjectedAsCollection()
         {
+            // given
+            var browser = new Browser(new TBs());
+
             // when
-            var response = _browser.Get("per-request/individuals");
+            var response = browser.Get("per-request/individuals");
 
             // then
             Assert.Equal("2", response.Body.AsString());
@@ -36,8 +35,11 @@ namespace Nancy.Bootstrapper.Tests
         [Fact]
         public void Test2_TypeRegisteredAsSingletonsAsIndividuals_Should_BeInjectedAsCollection()
         {
+            // given
+            var browser = new Browser(new TBs());
+
             // when
-            var response = _browser.Get("singletons/individuals");
+            var response = browser.Get("singletons/individuals");
 
             // then
             Assert.Equal("2", response.Body.AsString());
@@ -46,8 +48,11 @@ namespace Nancy.Bootstrapper.Tests
         [Fact]
         public void Test3_TypeRegisteredAsSingletonsAsMultiple_Should_BeInjectedAsCollection()
         {
+            // given
+            var browser = new Browser(new TBs());
+
             // when
-            var response = _browser.Get("singletons/multiple");
+            var response = browser.Get("singletons/multiple");
 
             // then
             Assert.Equal("2", response.Body.AsString());
@@ -56,11 +61,27 @@ namespace Nancy.Bootstrapper.Tests
         [Fact]
         public void Test1_TypeRegisteredAsPerRequest_Should_BeInjectedWithDependencyRegistereInBootstrapper()
         {
+            // given
+            var browser = new Browser(new TBs());
+
             // when
-            var response = _browser.Get("mixed/per-request/depends-on/container-registered");
+            var response = browser.Get("mixed/per-request/depends-on/container-registered");
 
             // then
             Assert.Equal("I'm ok", response.Body.AsString());
+        }
+
+        [Fact]
+        public void Test6_InjectingPerRequestComponentIntoRequestStartup()
+        {
+            // given
+            var browser = new Browser(new TBs());
+
+            // when
+            var response = browser.Get("startup/value");
+
+            // then
+            Assert.Equal("hello request startup", response.Body.AsString());
         }
     }
 

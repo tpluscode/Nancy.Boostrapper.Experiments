@@ -47,6 +47,7 @@
     <Compile Include="Test5.cs" />
     <Compile Include="Test3.cs" />
     <Compile Include="Test2.cs" />
+    <Compile Include="Test6.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />
