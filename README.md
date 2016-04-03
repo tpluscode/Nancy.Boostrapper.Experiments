@@ -20,10 +20,22 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 
 ## Test Results
 
-|   | Default | Default (no auto reg) | [Autofac][Autofac] | [DryIoc][DryIoc] | [Grace][Grace] | [MEF][MEF] | [MEF2][MEF2] | [Ninject][Ninject] | [StructureMap][StructureMap] | [Unity][Unity] | [Windsor][Windsor] |
-|---| 
+| Test ------------------>     | 1  | 2  | 3  | 4  | 5  |
+| ---------------------------- |----|----|----|----|----| 
+| Default                      |:+1:|:+1:|:+1:|:+1:|:x: |
+| Default (no auto reg)        |:+1:|:x: |:+1:|:x: |:+1:|
+| [Autofac][Autofac]           |:+1:|:+1:|:+1:|:+1:|:+1:|
+| [DryIoc][DryIoc]             |:+1:|:+1:|:+1:|:+1:|:+1:|
+| [Grace][Grace]               |:x: |:x: |:x: |:x: |:x: |
+| [LightInject][LightInject]   |:+1:|:x: |:+1:|:x: |:+1:|
+| [MEF][MEF]                   |:x: |:x: |:x: |:x: |:x: |
+| [MEF2][MEF2]                 |:+1:|:+1:|:x: |:+1:|:x: |
+| [Ninject][Ninject]           |:+1:|:+1:|:+1:|:+1:|:+1:|
+| [StructureMap][StructureMap] |:+1:|:+1:|:+1:|:+1:|:+1:|
+| [Unity][Unity]               |:+1:|:x: |:+1:|:x: |:+1:|
+| [Windsor][Windsor]           |:+1:|:+1:|:+1:|:+1:|:+1:|
 
-## Notes
+## General notes
 
 ### Grace
 
@@ -44,6 +56,10 @@ LightInject doesn't create a child container. Instead `PerScopeLifetime` must be
 
 LightInject requires .NET 4.5.1
 
+### Unity
+
+Unity bootstrapper has a dependency on Unity >= 2.1.505 and works fine with version 3.5, but breaks with 4.0.
+
 [Autofac]: https://github.com/NancyFx/Nancy.Bootstrappers.Autofac
 [DryIoc]: https://github.com/lcssk8board/Nancy.Bootstrappers.DryIoc
 [Grace]: https://github.com/ipjohnson/Nancy.Bootstrappers.Grace
@@ -53,3 +69,4 @@ LightInject requires .NET 4.5.1
 [StructureMap]: https://github.com/NancyFx/Nancy.Bootstrappers.StructureMap
 [Unity]: https://github.com/NancyFx/Nancy.Bootstrappers.Unity
 [Windsor]: https://github.com/NancyFx/Nancy.Bootstrappers.Windsor
+[LightInject]: http://seesharper.github.io/LightInject/#nancy
