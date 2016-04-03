@@ -41,16 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\MixedRegistrationModule.cs" />
-    <Compile Include="Modules\SingletonsModule.cs" />
-    <Compile Include="Modules\PerRequestModule.cs" />
-    <Compile Include="Services\DependsOnPerRequestDirectDependency.cs" />
-    <Compile Include="Services\ISingleton.cs" />
-    <Compile Include="Services\IPerRequest.cs" />
-    <Compile Include="Services\ISingletonAsMultiple.cs" />
-    <Compile Include="Services\IPerRequestAsMultiple.cs" />
-    <Compile Include="Registrations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Test1.cs" />
+    <Compile Include="Test4.cs" />
+    <Compile Include="Test5.cs" />
+    <Compile Include="Test3.cs" />
+    <Compile Include="Test2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="paket.references" />
