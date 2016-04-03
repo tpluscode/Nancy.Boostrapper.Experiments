@@ -17,23 +17,24 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 3. [`RegisterAll<T>(Lifetime.Singleton)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test3.cs)
 4. [Mutiple calls to `Register<T>(Lifetime.PerRequest)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test4.cs)
 5. [`RegisterAll<T>(Lifetime.PerRequest)` - injected as `IEnumerable<T>`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test5.cs)
+6. [Injecting `PerRequest` component into `IRequestStartup`](https://github.com/tpluscode/Nancy.Boostrapper.Experiments/blob/master/Nancy.Bootstrapper.TestSubjects/Test6.cs)
 
 ### Test Results
 
-| Test ------------------>                 | 1  | 2             | 3             | 4             | 5             |
-| ---------------------------------------- |----|---------------|---------------|---------------|---------------| 
-| TinyIoC                                  |:+1:|:+1:           |:+1:           |:+1:           |:x:<sup>1</sup>|
-| TinyIoC (no auto reg)                    |:+1:|:x:<sup>2</sup>|:+1:           |:x:<sup>2</sup>|:+1:           |
-| [Autofac][Autofac]                       |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |
-| [DryIoc][DryIoc]                         |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |
-| [Grace][Grace]<sup>1</sup>               |:x: |:x:            |:x:            |:x:            |:x:            |
-| [LightInject][LightInject]<sup>1,2</sup> |:+1:|:x:<sup>3</sup>|:+1:           |:x:<sup>3</sup>|:+1:           |
-| [MEF][MEF]<sup>1</sup>                   |:x: |:x:            |:x:            |:x:            |:x:            |
-| [MEF2][MEF2]                             |:+1:|:+1:           |:x:<sup>1</sup>|:+1:           |:x:<sup>1</sup>|
-| [Ninject][Ninject]                       |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |
-| [StructureMap][StructureMap]             |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |
-| [Unity][Unity]<sup>1</sup>               |:+1:|:x:<sup>2</sup>|:+1:           |:x:<sup>2</sup>|:+1:           |
-| [Windsor][Windsor]<sup>1</sup>           |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |
+| Test ------------------>                 | 1  | 2             | 3             | 4             | 5             | 6             |
+| ---------------------------------------- |----|---------------|---------------|---------------|---------------|---------------|
+| TinyIoC                                  |:+1:|:+1:           |:+1:           |:+1:           |:x:<sup>1</sup>|:+1:           |
+| TinyIoC (no auto reg)                    |:+1:|:x:<sup>2</sup>|:+1:           |:x:<sup>2</sup>|:+1:           |:+1:           |
+| [Autofac][Autofac]                       |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:+1:           |
+| [DryIoc][DryIoc]                         |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:x:<sup>1</sup>|
+| [Grace][Grace]<sup>1</sup>               |:x: |:x:            |:x:            |:x:            |:x:            |:x:            |
+| [LightInject][LightInject]<sup>1,2</sup> |:+1:|:x:<sup>3</sup>|:+1:           |:x:<sup>3</sup>|:+1:           |:+1:           |
+| [MEF][MEF]<sup>1</sup>                   |:x: |:x:            |:x:            |:x:            |:x:            |:x:            |
+| [MEF2][MEF2]                             |:+1:|:+1:           |:x:<sup>1</sup>|:+1:           |:x:<sup>1</sup>|:x:<sup>2</sup>|
+| [Ninject][Ninject]                       |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:+1:           |
+| [StructureMap][StructureMap]             |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:+1:           |
+| [Unity][Unity]<sup>1</sup>               |:+1:|:x:<sup>2</sup>|:+1:           |:x:<sup>2</sup>|:+1:           |:+1:           |
+| [Windsor][Windsor]<sup>1</sup>           |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:+1:           |
 
 ### Test notes
 
@@ -42,6 +43,10 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 **<sup>1</sup>** - When autoregistration is enabled, PerRequest components are resolved twice. I guess they are registered in both scopes. See issue [NancyFx/Nancy#2384](https://github.com/NancyFx/Nancy/issues/2384)
 
 **<sup>2</sup>** - TinyIoC resolves collections only if registered with `RegisterAll`/`RegisterMultiple`
+
+#### DryIoc
+
+**<sup>1</sup>** - The implementations of `IRequestStartup` seem to be resolved from application container and not request container, and so the dependency cannot be satisfied
 
 ### Grace
 
@@ -54,6 +59,8 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 ### MEF2
 
 **<sup>1</sup>** - this one is weird - `RegisterAll<T>()` has no effect with MEF2
+
+**<sup>2</sup>** - MEF2 bootstrapper doesn't do `IRequestStartup` at all
 
 ### Windsor
 
