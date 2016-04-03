@@ -3,7 +3,7 @@ Testing the behaviour of various Nancy bootstrappers
 
 ## Why?
 
-I had some issues with Nancy bootstrappers, the `Registrations` class and how various DI containers conusme these registrations.
+I had some issues with Nancy bootstrappers, the `Registrations` class and how various DI containers consume these registrations.
 
 In this repository I'm comparing the available bootstrappers to see how the operate in different circumstances.
 
