@@ -25,9 +25,13 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 
 ## Notes
 
+### Grace
+
+Grace has an outdated Nancy dependency and doesn't work with latest version.
+
 ### MEF
 
-MEF doesn't work at all
+MEF doesn't work at all and even adding a reference breaks entire solution.
 
 ### Windsor
 
@@ -36,7 +40,9 @@ used instead
 
 ### LightInject 
 
-LightInject doesn't create a child container. Instead `PerScopeLifetime` must be used
+LightInject doesn't create a child container. Instead `PerScopeLifetime` must be used. 
+
+LightInject requires .NET 4.5.1
 
 [Autofac]: https://github.com/NancyFx/Nancy.Bootstrappers.Autofac
 [DryIoc]: https://github.com/lcssk8board/Nancy.Bootstrappers.DryIoc
