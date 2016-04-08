@@ -15,7 +15,7 @@ namespace Nancy.Bootstrapper.TestSubjects
     {
         public Test5Registrations()
         {
-            RegisterAll<IPerRequestAsMultiple>();
+            RegisterAll<IPerRequestAsMultiple>(Lifetime.PerRequest);
         }
     }
     
