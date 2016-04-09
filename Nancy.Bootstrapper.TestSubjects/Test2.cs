@@ -7,7 +7,7 @@ namespace Nancy.Bootstrapper.TestSubjects
     {
         public Test2Module(IEnumerable<ISingleton> individuals) : base("singletons")
         {
-            Get["individuals"] = _ => individuals.Count().ToString();
+            Get["individuals"] = _ => individuals.Aggregate(0, (i, singleton) => i + singleton.Num).ToString();
         }
     }
 
@@ -22,13 +22,16 @@ namespace Nancy.Bootstrapper.TestSubjects
 
     public interface ISingleton
     {
+        int Num { get; }
     }
 
     public class Singleton1 : ISingleton
     {
+        public int Num => 1;
     }
 
     public class Singleton2 : ISingleton
     {
+        public int Num => 3;
     }
 }

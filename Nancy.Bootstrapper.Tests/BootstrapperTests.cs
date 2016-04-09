@@ -29,7 +29,7 @@ namespace Nancy.Bootstrapper.Tests
             var response = browser.Get("per-request/individuals");
 
             // then
-            Assert.Equal("2", response.Body.AsString());
+            Assert.Equal("4", response.Body.AsString());
         }
 
         [Fact]
@@ -42,7 +42,7 @@ namespace Nancy.Bootstrapper.Tests
             var response = browser.Get("singletons/individuals");
 
             // then
-            Assert.Equal("2", response.Body.AsString());
+            Assert.Equal("4", response.Body.AsString());
         }
 
         [Fact]

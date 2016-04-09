@@ -7,7 +7,7 @@ namespace Nancy.Bootstrapper.TestSubjects
     {
         public Test4Module(IEnumerable<IPerRequest> individuals) : base("per-request")
         {
-            Get["individuals"] = _ => individuals.Count().ToString();
+            Get["individuals"] = _ => individuals.Aggregate(0, (i, request) => i + request.Num).ToString();
         }
     }
 
@@ -22,13 +22,16 @@ namespace Nancy.Bootstrapper.TestSubjects
 
     public interface IPerRequest
     {
+        int Num { get; }
     }
 
     public class PerRequest1 : IPerRequest
     {
+        public int Num => 1;
     }
 
     public class PerRequest2 : IPerRequest
     {
+        public int Num => 3;
     }
 }
