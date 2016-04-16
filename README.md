@@ -26,7 +26,7 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 | TinyIoC                                  |:+1:|:+1:           |:+1:           |:+1:           |:x:<sup>1</sup>|:+1:           |
 | TinyIoC (no auto reg)                    |:+1:|:x:<sup>2</sup>|:+1:           |:x:<sup>2</sup>|:+1:           |:+1:           |
 | [Autofac][Autofac]                       |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:+1:           |
-| [DryIoc][DryIoc]                         |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:x:<sup>1</sup>|
+| [DryIoc][DryIoc]                         |:+1:|:+1:           |:+1:           |:+1:           |:+1:           |:+1:           |
 | [Grace][Grace]<sup>1</sup>               |:x: |:x:            |:x:            |:x:            |:x:            |:x:            |
 | [LightInject][LightInject]<sup>1,2</sup> |:+1:|:x:<sup>3</sup>|:+1:           |:x:<sup>3</sup>|:+1:           |:+1:           |
 | [MEF][MEF]<sup>1</sup>                   |:x: |:x:            |:x:            |:x:            |:x:            |:x:            |
@@ -43,10 +43,6 @@ can be sure that the behaviour will be the same regardless of the bootstrapper c
 **<sup>1</sup>** - When autoregistration is enabled, PerRequest components are resolved twice. I guess they are registered in both scopes. See issue [NancyFx/Nancy#2384](https://github.com/NancyFx/Nancy/issues/2384)
 
 **<sup>2</sup>** - TinyIoC resolves collections only if registered with `RegisterAll`/`RegisterMultiple`
-
-#### DryIoc
-
-**<sup>1</sup>** - The implementations of `IRequestStartup` seem to be resolved from application container and not request container, and so the dependency cannot be satisfied. See issue [lcssk8board/Nancy.Bootstrappers.DryIoc#2](https://github.com/lcssk8board/Nancy.Bootstrappers.DryIoc/issues/2)
 
 ### Grace
 
